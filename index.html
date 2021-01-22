@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Phaser TEST</title></head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js"></script>
+<script>
+const scene_w = 640;
+const scene_h = 480;
+
+const config = {
+    type: Phaser.AUTO,
+    width: scene_w,
+    height: scene_h,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update,
+    }
+}
+
+let game = new Phaser.Game(config);
+
+let pelota;
+
+function preload(){
+    
+}
+function create(){
+    pelota = this.add.circle(200,200,80,0x6666ff);
+}
+function update(){
+    
+}
+</script>
+</body>
+</html>
