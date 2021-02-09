@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head><title>Phaser TEST</title></head>
+<head>
+<meta charset="utf-8"/>
+<title>Juegaco Phaser</title>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js"></script>
+</head>
+
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js"></script>
+<h1>Nuestro fantástico juego de JS/Phaser</h1>
+
 <script>
 const scene_w = 640;
 const scene_h = 480;
 
 const config = {
-    type: Phaser.AUTO,
-    width: scene_w,
-    height: scene_h,
-    scene: {
-        preload: preload,
-        create: create,
-        update: update,
-    }
-}
+	type: Phaser.CANVAS,
+	width: scene_w,
+	height: scene_h,
+	scene: {
+		preload: precarga,
+		create: crear,
+		update: actualiza
+	}
+};
 
 let game = new Phaser.Game(config);
 
-let pelota;
+let bg;
 
-function preload(){
-    
+function precarga ()
+{
+	this.load.image("background", "stars.jpg");
 }
-function create(){
-    pelota = this.add.circle(200,200,80,0x6666ff);
+
+function crear ()
+{
+	bg = this.add.image(scene_w/2, scene_h/2, "background");
 }
-function update(){
-    
+
+function actualiza ()
+{
+
 }
 </script>
+
+
 </body>
 </html>
