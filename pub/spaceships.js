@@ -1,6 +1,19 @@
 const scene_w = 640;
 const scene_h = 480;
 
+let preload = () => {
+  
+}
+
+let create = () => {
+  this.load.image("background", "stars.jpg");
+  this.load.image("character", "hip.png);
+}
+
+let update = () => {
+
+}
+
 const config = {
 	type: Phaser.CANVAS,
 	width: scene_w,
@@ -14,9 +27,9 @@ const config = {
         }
     },
 	scene: {
-		preload: precarga,
-		create: crear,
-		update: actualiza
+		preload: preload,
+		create: create,
+		update: update
 	}
 };
 
