@@ -1,7 +1,7 @@
 const scene_w = 640;
 const scene_h = 480;
 
-let player_init_x = 32;
+let player_init_x = 16;
 
 let bg;
 let player;
@@ -23,7 +23,7 @@ const SCREEN_MARGIN = 32;
 function preload () {
 	console.log("Preload");
 	this.load.image("background", "stars.jpg");
-	this.load.image("character", "PNG/Characters/woman.png");
+	this.load.image("character", "PNG/Characters/ship.png");
 	this.load.image("enemy", "PNG/Characters/man.png");
 	this.load.image("bullet", "PNG/Cars/scooter.png");
 }
@@ -32,7 +32,7 @@ function create () {
 
 	bg = this.add.image(scene_w/2, scene_h/2, "background");
 	player = this.add.image(player_init_x, scene_h/2, "character");
-	player.setScale(2);
+	player.setScale(0.25);
 
 	for (let i = 0; i < MAX_ENEMIES; i++){
 		let x = Math.random()*scene_w*10 + scene_w/2;
